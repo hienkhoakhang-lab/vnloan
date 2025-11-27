@@ -8,11 +8,11 @@
 
   <style>
     :root {
-      /* Mặc định: chế độ ban đêm */
       --primary: #2563eb;
       --primary-dark: #1d4ed8;
       --accent: #fbbf24;
-      --bg-main: radial-gradient(circle at top, #1d263b 0, #020617 55%);
+      --bg: #0f172a;
+      --bg-soft: #020617;
       --card-bg: #020617;
       --card-border: rgba(148, 163, 184, 0.3);
       --text: #f9fafb;
@@ -31,7 +31,7 @@
     }
 
     body {
-      background: var(--bg-main);
+      background: radial-gradient(circle at top, #1d263b 0, #020617 55%);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -512,101 +512,6 @@
         display: none;
       }
     }
-
-    /* ===================== */
-    /*  DAY THEME (NỀN XANH) */
-    /* ===================== */
-    body.day-theme {
-      --bg-main: linear-gradient(to bottom, #e0f2fe, #ecfdf5);
-      --card-bg: #ffffff;
-      --card-border: rgba(148, 163, 184, 0.35);
-      --text: #0f172a;
-      --muted: #4b5563;
-      --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.18);
-      --shadow-chip: 0 6px 14px rgba(15, 23, 42, 0.12);
-    }
-
-    body.day-theme header {
-      background: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    body.day-theme .nav-links a {
-      color: #1f2937;
-    }
-
-    body.day-theme .nav-chip {
-      background: rgba(34, 197, 94, 0.12);
-      color: #15803d;
-      border-color: rgba(34, 197, 94, 0.4);
-    }
-
-    body.day-theme .hero-main {
-      background: radial-gradient(circle at top left, rgba(59,130,246,0.15), #ffffff);
-      border-color: rgba(129, 140, 248, 0.4);
-    }
-
-    body.day-theme .hero-badge {
-      background: rgba(219, 234, 254, 0.9);
-      border-color: rgba(129, 140, 248, 0.4);
-      color: #1d4ed8;
-    }
-
-    body.day-theme .hero-sub {
-      color: #374151;
-    }
-
-    body.day-theme .hero-list {
-      color: #111827;
-    }
-
-    body.day-theme .btn-ghost {
-      background: #ffffff;
-      color: #111827;
-      border-color: rgba(148,163,184,0.7);
-    }
-
-    body.day-theme .hero-note {
-      color: #6b7280;
-    }
-
-    body.day-theme .hero-side {
-      background: linear-gradient(160deg, #e0f2fe, #bfdbfe);
-      border-color: rgba(59,130,246,0.6);
-      color: #1f2937;
-    }
-
-    body.day-theme .hero-side-row span.label {
-      color: #6b7280;
-    }
-
-    body.day-theme .hero-side-row span.value {
-      color: #111827;
-    }
-
-    body.day-theme .hero-side-foot {
-      color: #374151;
-    }
-
-    body.day-theme .hero-pill {
-      background: #ffffff;
-      border-color: rgba(148,163,184,0.6);
-      color: #111827;
-    }
-
-    body.day-theme .offer-card {
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
-    }
-
-    body.day-theme .offer-desc,
-    body.day-theme .offer-label,
-    body.day-theme .section-sub,
-    body.day-theme .info-card p,
-    body.day-theme .info-card ul,
-    body.day-theme .disclaimer,
-    body.day-theme footer {
-      color: #6b7280;
-    }
   </style>
 </head>
 <body>
@@ -1070,17 +975,7 @@
   function openOffer(url) {
     window.open(url, "_blank");
   }
-
-  // Tự động chuyển theme: ban ngày nền xanh, ban đêm nền tối
-  (function () {
-    var now = new Date();
-    var hour = now.getHours(); // 0-23 theo giờ máy người dùng
-
-    // Ví dụ: 7h-18h là ban ngày
-    if (hour >= 7 && hour < 18) {
-      document.body.classList.add("day-theme");
-    }
-  })();
 </script>
 </body>
 </html>
+
