@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Vay tiền online nhanh – Creditnice, FinPug, Cashonline, Binixo…</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="So sánh các ứng dụng vay tiền online: Creditnice, FinPug, Creditify, Cashonline, Finloo, Credy, Binixo, Credilo. Đăng ký 100% online, xét duyệt nhanh, nhận tiền trong ngày.">
+  <meta name="description" content="So sánh các ứng dụng vay tiền online: Creditnice, FinPug, Creditify, Cashonline, Finloo, Credy, Binixo, Credilo, Finami, Jeff App, Cashspace VN. Đăng ký 100% online, xét duyệt nhanh, nhận tiền trong ngày.">
 
   <style>
     :root {
@@ -75,17 +75,17 @@
     }
 
     .logo-circle {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #fbbf24, #f97316);
+      background: radial-gradient(circle at 30% 20%, #facc15, #fb923c);
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       font-size: 15px;
       font-weight: 800;
+      color: #0f172a;
       box-shadow: var(--shadow-chip);
-      color: #0b1120;
     }
 
     .logo-text {
@@ -94,47 +94,15 @@
       line-height: 1.1;
     }
 
-    .logo-text span.main {
+    .logo-text .main {
       font-size: 15px;
       font-weight: 700;
-      letter-spacing: .04em;
       text-transform: uppercase;
     }
 
-    .logo-text span.sub {
+    .logo-text .sub {
       font-size: 11px;
       color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 11px;
-    }
-
-    .nav-links a {
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: #e5e7eb;
-      opacity: 0.9;
-    }
-
-    .nav-links a:hover {
-      border-color: rgba(148, 163, 184, 0.6);
-      opacity: 1;
-    }
-
-    .nav-chip {
-      font-size: 10px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.18);
-      color: #bbf7d0;
-      border: 1px solid rgba(34, 197, 94, 0.4);
-      box-shadow: var(--shadow-chip);
-      white-space: nowrap;
     }
 
     /* HERO */
@@ -149,9 +117,21 @@
     .hero-main {
       padding: 16px 14px 14px;
       border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top left, rgba(59,130,246,0.45), rgba(15,23,42,0.98));
+      background: linear-gradient(135deg,
+        rgba(59,130,246,0.45),
+        rgba(15,23,42,0.98),
+        rgba(59,130,246,0.45)
+      );
+      background-size: 250% 250%;
+      animation: heroMove 14s ease infinite;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(129, 140, 248, 0.55);
+    }
+
+    @keyframes heroMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .hero-badge {
@@ -232,6 +212,13 @@
       align-items: center;
       gap: 8px;
       box-shadow: var(--shadow-soft);
+      transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 22px 40px rgba(251,191,36,0.45);
+      opacity: .96;
     }
 
     .btn-main span.arrow {
@@ -246,6 +233,12 @@
       color: #e5e7eb;
       font-size: 11px;
       cursor: pointer;
+      transition: background .25s ease, transform .25s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(148,163,184,0.18);
+      transform: translateY(-1px);
     }
 
     .hero-note {
@@ -267,9 +260,6 @@
       font-size: 14px;
       margin-bottom: 8px;
       font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
     .hero-side-row {
@@ -310,9 +300,9 @@
       color: #e5e7eb;
     }
 
-    /* SECTION HEADERS */
+    /* SECTION / OFFERS */
     .section {
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .section-header {
@@ -333,7 +323,6 @@
       color: var(--muted);
     }
 
-    /* OFFER GRID */
     .offer-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -348,6 +337,12 @@
       padding: 12px 12px 10px;
       position: relative;
       overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 46px rgba(37,99,235,0.45);
     }
 
     .offer-glow {
@@ -356,6 +351,11 @@
       background: radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 65%);
       opacity: 0.7;
       pointer-events: none;
+      transition: opacity .3s ease;
+    }
+
+    .offer-card:hover .offer-glow {
+      opacity: 1;
     }
 
     .offer-inner {
@@ -438,12 +438,19 @@
       box-shadow: var(--shadow-soft);
       min-width: 130px;
       justify-content: center;
+      transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease;
+    }
+
+    .btn-offer:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(37,99,235,0.55);
+      opacity: .96;
     }
 
     .offer-label {
       font-size: 10px;
       color: var(--muted);
-      max-width: 200px;
+      max-width: 220px;
     }
 
     /* INFO / FAQ */
@@ -491,6 +498,18 @@
       border-top: 1px solid rgba(31, 41, 55, 0.9);
     }
 
+    /* FADE-IN EFFECT */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* RESPONSIVE */
     @media (min-width: 768px) {
       .hero {
@@ -508,8 +527,8 @@
       .hero-side {
         order: -1;
       }
-      .nav-links {
-        display: none;
+      .nav-inner {
+        padding-inline: 12px;
       }
     }
   </style>
@@ -524,18 +543,13 @@
         <span class="sub">Creditnice • FinPug • Cashonline…</span>
       </div>
     </div>
-    <div class="nav-links">
-      <a href="#offers">Danh sách app</a>
-      <a href="#faq">Hướng dẫn</a>
-      <span class="nav-chip">Tư vấn 100% online</span>
-    </div>
   </div>
 </header>
 
 <main class="page">
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="hero-main">
+    <div class="hero-main fade-in">
       <div class="hero-badge">
         <span class="dot"></span>
         <span>Đối tác tài chính online – xét duyệt tự động</span>
@@ -544,7 +558,7 @@
         Vay tiền <span class="hero-highlight">online nhanh</span> – nhận tiền trong ngày
       </h1>
       <p class="hero-sub">
-        Tổng hợp các ứng dụng vay tiền uy tín như Creditnice, FinPug, Creditify, Cashonline, Finloo, Credy, Binixo, Credilo. 
+        Tổng hợp các ứng dụng vay tiền uy tín như Creditnice, FinPug, Creditify, Cashonline, Finloo, Credy, Binixo, Credilo, Finami, Jeff App, Cashspace VN.
         Đăng ký đơn giản, xét duyệt nhanh, giải ngân về tài khoản ngân hàng.
       </p>
       <ul class="hero-list">
@@ -562,12 +576,12 @@
         </button>
       </div>
       <p class="hero-note">
-        *Chúng tôi không trực tiếp cho vay, chỉ giới thiệu đối tác tài chính. 
+        *Chúng tôi không trực tiếp cho vay, chỉ giới thiệu đối tác tài chính.
         Hãy đọc kỹ điều khoản & hợp đồng trước khi quyết định vay.
       </p>
     </div>
 
-    <aside class="hero-side">
+    <aside class="hero-side fade-in">
       <h2>Ưu đãi hôm nay</h2>
       <div class="hero-side-row">
         <span class="label">Khoản vay tham khảo:</span>
@@ -607,7 +621,7 @@
 
     <div class="offer-grid">
       <!-- CREDITNICE -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -615,7 +629,7 @@
             <div class="offer-tag">Dễ duyệt</div>
           </div>
           <p class="offer-desc">
-            App vay nhanh hỗ trợ khách cần tiền gấp, hồ sơ đơn giản, quy trình online 100%. 
+            App vay nhanh hỗ trợ khách cần tiền gấp, hồ sơ đơn giản, quy trình online 100%.
             Phù hợp với khoản vay nhỏ – trung bình.
           </p>
           <div class="offer-meta-row">
@@ -647,7 +661,7 @@
       </article>
 
       <!-- FINPUG -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -686,7 +700,7 @@
       </article>
 
       <!-- CREDITIFY -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -725,7 +739,7 @@
       </article>
 
       <!-- CASHONLINE -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -764,7 +778,7 @@
       </article>
 
       <!-- FINLOO -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -772,7 +786,7 @@
             <div class="offer-tag alt">Linh hoạt</div>
           </div>
           <p class="offer-desc">
-            Hỗ trợ nhiều mục đích chi tiêu: sinh hoạt, mua sắm nhỏ, sửa chữa, du lịch… 
+            Hỗ trợ nhiều mục đích chi tiêu: sinh hoạt, mua sắm nhỏ, sửa chữa, du lịch…
             Đăng ký qua form online.
           </p>
           <div class="offer-meta-row">
@@ -804,7 +818,7 @@
       </article>
 
       <!-- CREDY -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -843,7 +857,7 @@
       </article>
 
       <!-- BINIXO -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -882,7 +896,7 @@
       </article>
 
       <!-- CREDILO -->
-      <article class="offer-card">
+      <article class="offer-card fade-in">
         <div class="offer-glow"></div>
         <div class="offer-inner">
           <div class="offer-top">
@@ -919,6 +933,112 @@
           </div>
         </div>
       </article>
+
+      <!-- FINAMI -->
+      <article class="offer-card fade-in">
+        <div class="offer-glow"></div>
+        <div class="offer-inner">
+          <div class="offer-top">
+            <div class="offer-name">Finami – Vay nhanh linh hoạt</div>
+            <div class="offer-tag">Dễ duyệt</div>
+          </div>
+          <p class="offer-desc">
+            App hỗ trợ vay nhanh, thủ tục đơn giản, phù hợp khách cần tiền gấp trong ngày.
+          </p>
+          <div class="offer-meta-row">
+            <div class="meta-item">
+              <span class="label">Khoản vay</span>
+              <span class="value">1 – 20 triệu (tham khảo)</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Thời gian duyệt</span>
+              <span class="value">Trong ngày</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Yêu cầu</span>
+              <span class="value">CMND/CCCD</span>
+            </div>
+          </div>
+          <div class="offer-bottom">
+            <button class="btn-offer" type="button" onclick="openOffer('https://murtov.com/xomS')">
+              Đăng ký Finami
+              <span>↗</span>
+            </button>
+            <p class="offer-label">Phù hợp khách cần tiền gấp, hồ sơ đơn giản.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- JEFF APP -->
+      <article class="offer-card fade-in">
+        <div class="offer-glow"></div>
+        <div class="offer-inner">
+          <div class="offer-top">
+            <div class="offer-name">Jeff App – Gợi ý khoản vay</div>
+            <div class="offer-tag alt">Đề xuất</div>
+          </div>
+          <p class="offer-desc">
+            Nền tảng so sánh nhiều app vay phù hợp hồ sơ, tăng tỷ lệ duyệt.
+          </p>
+          <div class="offer-meta-row">
+            <div class="meta-item">
+              <span class="label">Tính năng</span>
+              <span class="value">So sánh nhiều app</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Đối tượng</span>
+              <span class="value">18 – 60</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Hồ sơ</span>
+              <span class="value">Online 100%</span>
+            </div>
+          </div>
+          <div class="offer-bottom">
+            <button class="btn-offer" type="button" onclick="openOffer('https://murtov.com/iomS')">
+              Đăng ký Jeff App
+              <span>↗</span>
+            </button>
+            <p class="offer-label">Nên thử nếu muốn có nhiều lựa chọn vay.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASHSPACE VN -->
+      <article class="offer-card fade-in">
+        <div class="offer-glow"></div>
+        <div class="offer-inner">
+          <div class="offer-top">
+            <div class="offer-name">Cashspace VN – Nhiều đối tác</div>
+            <div class="offer-tag">Multi-offer</div>
+          </div>
+          <p class="offer-desc">
+            Hệ thống kết nối với nhiều đơn vị cho vay, tối ưu việc tìm kiếm gói vay phù hợp cho bạn.
+          </p>
+          <div class="offer-meta-row">
+            <div class="meta-item">
+              <span class="label">Tính năng</span>
+              <span class="value">Kết nối nhiều app</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Hồ sơ</span>
+              <span class="value">CMND/CCCD</span>
+            </div>
+            <div class="meta-item">
+              <span class="label">Thời gian</span>
+              <span class="value">Nhanh</span>
+            </div>
+          </div>
+          <div class="offer-bottom">
+            <button class="btn-offer" type="button" onclick="openOffer('https://murtov.com/RomS')">
+              Đăng ký Cashspace
+              <span>↗</span>
+            </button>
+            <p class="offer-label">Hệ thống gợi ý giúp tăng cơ hội được duyệt.</p>
+          </div>
+        </div>
+      </article>
+
     </div>
   </section>
 
@@ -931,7 +1051,7 @@
       </div>
     </div>
 
-    <div class="info-card">
+    <div class="info-card fade-in">
       <h3>1. App vay tiền online hoạt động như thế nào?</h3>
       <p>
         App vay tiền online là các nền tảng tài chính cho phép bạn đăng ký vay trực tuyến, ký kết hợp đồng điện tử
@@ -954,9 +1074,9 @@
       </ul>
 
       <p class="disclaimer">
-        <strong>Lưu ý:</strong> Trang này chỉ đóng vai trò <strong>giới thiệu & điều hướng</strong> sang các đối tác như Creditnice, 
-        FinPug, Creditify, Cashonline, Finloo, Credy, Binixo, Credilo… 
-        Mọi thông tin về lãi suất, điều khoản, hợp đồng vay là giữa <strong>bạn và đơn vị cho vay</strong>. 
+        <strong>Lưu ý:</strong> Trang này chỉ đóng vai trò <strong>giới thiệu & điều hướng</strong> sang các đối tác như Creditnice,
+        FinPug, Creditify, Cashonline, Finloo, Credy, Binixo, Credilo, Finami, Jeff App, Cashspace VN…
+        Mọi thông tin về lãi suất, điều khoản, hợp đồng vay là giữa <strong>bạn và đơn vị cho vay</strong>.
         Hãy đọc kỹ hợp đồng trước khi đồng ý.
       </p>
     </div>
@@ -975,7 +1095,19 @@
   function openOffer(url) {
     window.open(url, "_blank");
   }
+
+  // Fade-in khi cuộn
+  const fadeEls = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  fadeEls.forEach((el) => observer.observe(el));
 </script>
 </body>
 </html>
-
